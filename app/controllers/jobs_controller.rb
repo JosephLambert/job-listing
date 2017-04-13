@@ -6,6 +6,8 @@ class JobsController < ApplicationController
 
     def show
         @job = Job.find(params[:id])
+
+        flash[:warning] = 'This Job already archieved' if @job.is_hidden
     end
 
     def new
