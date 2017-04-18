@@ -18,7 +18,9 @@
 
      .title {
          text-align: center;
-         margin-bottom: 80px;
+         margin-bottom: 50px;
+         padding-top: 50px;
+
      }
 
      .slogan {
@@ -30,13 +32,71 @@
          top: 12px;
      }
 
+     .slogan-bold{
+       color: #222;
+
+       text-align: center;
+       font-size: 35px;
+     }
+
      .lead {
          margin-bottom: 60px;
          text-align: center;
-         color: white;
-     }
- }
 
+         color: white;
+
+     }
+
+     .welcome-btn {
+       padding: 15px 70px;
+       font-size: 21px;
+       font-weight: bolder;
+       background-color: #F4511E; //theme color orange
+       border-color: #F4511E;
+
+
+     }
+
+     .welcome-btn:hover {
+    color: #fff;
+    background-color: #C73507; // a little deeper when hover
+    border-color: #C73507;
+}
+    .welcome-btn:active {
+  color: #fff;
+  background-color: #9E2600; // a little deeper when focus
+  border-color: #9E2600;
+}
+.welcome-btn:focus {
+    color: #fff;
+    background-color: #9E2600;
+    border-color: #9E2600;
+}
+
+.welcome-btn:active:hover, .welcome-btn:active:focus, .welcome-btn:active.focus, .welcome-btn.active:hover, .welcome-btn.active:focus, .welcome-btn.active.focus, .open > .welcome-btn.dropdown-toggle:hover, .open > .welcome-btn.dropdown-toggle:focus, .open > .welcome-btn.dropdown-toggle.focus{
+color: #fff;
+background-color: #9E2600; // a little deeper when focus
+border-color: #9E2600;
+}
+}
+
+//---------Services---------
+
+.service-header {
+ font-size: 22px;
+ font-weight: bold;
+
+}
+
+.service-icon {
+ font-size: 50px;
+ color: #F4511E;
+
+}
+
+.service-space {
+  margin-bottom: 50px;
+}
 
  //---------Content---------
 
@@ -65,3 +125,71 @@
      font-size: 18px;
      font-weight: 400;
  }
+
+//----------customers-feedback--------
+
+blockquote{
+    border-left:none
+}
+
+.quote-badge{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.quote-box{
+
+    overflow: hidden;
+    margin-top: -50px;
+    padding-top: -100px;
+    border-radius: 17px;
+    background-color: #F4511E;
+    margin-top: 25px;
+    color:white;
+    width: 325px;
+    box-shadow: 2px 2px 2px 2px #E0E0E0;
+
+}
+
+.quotation-mark{
+
+    margin-top: -10px;
+    font-weight: bold;
+    font-size:100px;
+    color:white;
+    font-family: "Times New Roman", Georgia, Serif;
+
+}
+
+.quote-text{
+
+    font-size: 19px;
+    margin-top: -65px;
+}
+
+//---------call-to-action--------
+
+#call-to-action {
+
+  background-image: url("call-to-action");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 500px;
+}
+
+#call-to-action .btn-danger {
+  color: #fff;
+    background-color: #F4511E;
+    border-color: #F4511E;
+}
+
+#call-to-action .btn-lg, .btn-group-lg > .btn {
+    padding: 12px 58px;
+  }
+
+  #call-to-action .call-to-action-slogan {
+    color: #222;
+
+    text-align: center;
+    font-size: 35px;
+  }

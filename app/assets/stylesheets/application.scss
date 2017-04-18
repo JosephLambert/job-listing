@@ -28,38 +28,38 @@
  }
 
  .navbar-default .navbar-brand {
-     color: #EF6C00;
+     color: #F4511E;
      padding: 10px 15px;
      line-height: 30px;
  }
 
  .navbar-default .navbar-brand:hover,
  .navbar-default .navbar-brand:focus {
-     color: #FF6F00;
+     color: #F4511E;
      background-color: transparent;
  }
 
  .navbar-default .navbar-nav > li > a {
-     color: #EF6C00;
+     color: #F4511E;
  }
 
  .navbar-default .navbar-nav > li > a:hover,
  .navbar-default .navbar-nav > li > a:focus {
-     color: #FF6F00;
-     background-color: transparent;
+   background-color: #F4511E;
+   color: #212121;
  }
 
  .navbar-default .navbar-nav > .active > a,
  .navbar-default .navbar-nav > .active > a:hover,
  .navbar-default .navbar-nav > .active > a:focus {
-     color: #FF6F00;
-     background-color: #FFE0B2;
+     color: #F4511E;
+     background-color: #F4511E;
  }
 
  .navbar-default .navbar-nav > .open > a,
  .navbar-default .navbar-nav > .open > a:focus,
  .navbar-default .navbar-nav > .open > a:hover {
-     background-color: #FFE0B2;
+     background-color: #F4511E;
      color: #212121;
  }
 
@@ -77,7 +77,7 @@
   //---------alert---------
 
   .alert {
-      padding: 15px;
+
       margin-bottom: 0;
       border: 1px solid transparent;
       border-radius: 4px;
