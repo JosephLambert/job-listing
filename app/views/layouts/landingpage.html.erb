@@ -7,7 +7,7 @@
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
         <link rel="shortcut icon" href="/favicon.ico">
     </head>
-    <body data-spy="scroll" data-target=".navbar" data-offset="100" style="position: relative;">
+    <body data-spy="scroll" data-target=".navbar" data-offset="100" style="position: relative;" id="welcome-body">
         <div class="container-fluid">
             <div class="row">
                 <%= render "common/welcome_navbar"%>
@@ -17,6 +17,6 @@
                 <%= yield %>
             </div>
         </div>
-        <%= render "common/footer"%>
+        <%= render "common/welcome-footer"%>
     </body>
 </html>
