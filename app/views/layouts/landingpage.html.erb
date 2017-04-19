@@ -7,10 +7,10 @@
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
         <link rel="shortcut icon" href="/favicon.ico">
     </head>
-    <body>
+    <body data-spy="scroll" data-target=".navbar" data-offset="100" style="position: relative;">
         <div class="container-fluid">
             <div class="row">
-                <%= render "common/navbar"%>
+                <%= render "common/welcome_navbar"%>
                 <%= render "common/flashes"%>
                 <div class="service-space">
                 </div>

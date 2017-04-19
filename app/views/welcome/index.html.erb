@@ -1,4 +1,4 @@
-<div class="col-md-12">
+<div class="container-fluid" id="section1">
     <div class="row box">
         <div class="box-inner col-md-12">
             <h1 class="title">Job-Hunting</h1>
@@ -15,7 +15,7 @@
         </div>
     </div>
 </div>
-<div class="text-center"  id="services">
+<div class="text-center container-fluid"  id="services">
     <div class="container">
         <h1 class="service-space-thinner" style="font-size:40px;">SERVICES</h1>
         <h4 class="service-header service-space-thinner">What we offer</h4>
@@ -39,52 +39,54 @@
         </div>
     </div>
 </div>
-<div class="content-section-a">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5 col-sm-6">
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading"><span class="glyphicon glyphicon-pencil service-icon"></span>一、精心准备好你的简历</h2>
-                <p class="lead">一份精心修改的简历可以让你从众多求职者中脱引而出</p>
+<div class="container-fluid" id="work_flow">
+    <div class="content-section-a">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading"><span class="glyphicon glyphicon-pencil service-icon"></span>一、精心准备好你的简历</h2>
+                    <p class="lead">一份精心修改的简历可以让你从众多求职者中脱引而出</p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <%= image_tag 'pic-1.jpg', class: 'img-responsive' %>
+                </div>
             </div>
-            <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                <%= image_tag 'pic-1.jpg', class: 'img-responsive' %>
+        </div>
+    </div>
+    <div class="content-section-b">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading"><span class="glyphicon glyphicon-cloud-upload service-icon"></span>二、选择并且投递</h2>
+                    <p class="lead">通过筛选机制，找到合适自己的职位上传简历</p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <%= image_tag 'pic-2.jpg', class: 'img-responsive' %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-section-a">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading"><span class="glyphicon glyphicon-ok service-icon"></span>三、得到offer！</h2>
+                    <p class="lead">得到满意的职位或者根据HR反馈做出改进再次投递</p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <%= image_tag 'pic-3.jpg', class: 'img-responsive' %>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<div class="content-section-b">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading"><span class="glyphicon glyphicon-cloud-upload service-icon"></span>二、选择并且投递</h2>
-                <p class="lead">通过筛选机制，找到合适自己的职位上传简历</p>
-            </div>
-            <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                <%= image_tag 'pic-2.jpg', class: 'img-responsive' %>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="content-section-a">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5 col-sm-6">
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading"><span class="glyphicon glyphicon-ok service-icon"></span>三、得到offer！</h2>
-                <p class="lead">得到满意的职位或者根据HR反馈做出改进再次投递</p>
-            </div>
-            <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                <%= image_tag 'pic-3.jpg', class: 'img-responsive' %>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="customers-feedback">
+<div class="container-fluid" id="customers-feedback">
     <div class="container">
         <div class="service-space">
         </div>
@@ -152,7 +154,7 @@
             </div>
         </div>
     </div>
-    <div id="call-to-action">
+    <div class="container-fluid" id="call-to-action">
         <div class="container-fluid text-center">
             <div class="row">
                 <div class="col-md-12">
@@ -164,7 +166,7 @@
             </div>
         </div>
     </div>
-    <div id="faq">
+    <div class="container-fluid" id="faq">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 ">
