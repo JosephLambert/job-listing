@@ -16,5 +16,11 @@ Rails.application.routes.draw do
         end
     end
 
+    get 'aboutus', to: 'welcome#aboutus'
+
+    get 'contactus', to: 'welcome#contactus'
+
+    get 'cooperatewithus', to: 'welcome#cooperatewithus'
+
     root 'welcome#index'
 end
