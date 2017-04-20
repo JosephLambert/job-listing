@@ -1,3 +1,209 @@
 // Place all the styles related to the jobs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//-------------job-index--------------
+
+.carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+}
+
+.carousel-indicators li {
+    border-color: #f4511e;
+}
+
+.carousel-indicators li.active {
+    background-color: #f4511e;
+}
+
+.item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin:0;
+    padding: 300px 0 100px 0;
+}
+
+.item span {
+    font-style: normal;
+}
+
+#carousel1 {
+  background-image: url("carousel_pic1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #000;
+}
+
+#carousel2 {
+  background-image: url("carousel_pic2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+#carousel3 {
+  background-image: url("carousel_pic3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+//----------select-btn----------
+
+#job_section  .btn-lg, .btn-group-lg > .btn {
+    padding: 10px 60px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+}
+
+#job_section   .btn-default {
+    color: #fff;
+    background-color: #f4511e;
+    border-color: #C73507;
+}
+
+//---------job-table------------
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
+
+
+
+ #job_section  {
+   div.table-title {
+   display: block;
+  margin: auto;
+  max-width: 600px;
+  padding:0 0 20px 0;
+  width: 100%;
+}
+
+.table-title h3 {
+   color: #f4511e;
+   font-size: 45px;
+   font-weight: 400;
+   font-style:normal;
+   font-family: "Roboto", helvetica, arial, sans-serif;
+   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+   text-transform:uppercase;
+}
+
+
+/*** Table Styles **/
+
+.table-fill {
+  background: white;
+  border-radius:3px;
+  border-collapse: collapse;
+
+  margin: auto;
+
+  padding:5px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+}
+
+th {
+  color:#D5DDE5;
+  background:#f4511e;
+  border-bottom:4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  font-size:23px;
+  font-weight: 100;
+  padding:16px;
+  text-align:left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
+}
+
+th:first-child {
+  border-top-left-radius:3px;
+}
+
+th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+}
+
+tr {
+  border-top: 1px solid #C1C3D1;
+  border-bottom-: 1px solid #C1C3D1;
+  color:#666B85;
+  font-size:16px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+
+tr:hover td {
+  background:#4E5066;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+  border-bottom: 1px solid #22262e;
+}
+
+tr:first-child {
+  border-top:none;
+}
+
+tr:last-child {
+  border-bottom:none;
+}
+
+tr:nth-child(odd) td {
+  background:#EBEBEB;
+}
+
+tr:nth-child(odd):hover td {
+  background:#4E5066;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius:3px;
+}
+
+tr:last-child td:last-child {
+  border-bottom-right-radius:3px;
+}
+
+td {
+  background:#FFFFFF;
+  padding:13px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:18px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+}
+
+td:last-child {
+  border-right: 0px;
+}
+
+th.text-left {
+  text-align: left;
+}
+
+th.text-center {
+  text-align: center;
+}
+
+th.text-right {
+  text-align: right;
+}
+
+td.text-left {
+  text-align: left;
+}
+
+td.text-center {
+  text-align: center;
+}
+
+td.text-right {
+  text-align: right;
+}
+}
