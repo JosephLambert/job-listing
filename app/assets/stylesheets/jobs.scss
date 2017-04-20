@@ -207,3 +207,57 @@ td.text-right {
   text-align: right;
 }
 }
+
+//-----------job-show-----------
+
+#job-show {
+  .panel-default > .panel-heading {
+      color: #fff;
+      background-color: #f4511e;
+      border-color: #f4511e;
+  }
+
+.list-group-item {
+
+  border: none;
+}
+
+.job-show-text {
+  color: #222;
+  font-size: 25px;
+
+}
+
+.panel-footer {
+    padding: 15px 15px;
+    background-color: #233140;
+    border-top: 1px solid #ddd;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.btn-lg, .btn-group-lg > .btn {
+    padding: 10px 50px;
+    font-size: 21px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+}
+}
+
+//--------resume-new-----------
+
+#submit-resume {
+
+  .btn-lg, .btn-group-lg > .btn {
+    padding: 10px 60px;
+    font-size: 20px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #f4511e;
+    border-color: #f4511e;
+}
+}

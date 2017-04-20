@@ -1,7 +1,23 @@
-<h3>投交履历到<%= @job.title %></h3>
-<hr>
-<%= simple_form_for [@job,@resume] do |f| %>
-    <%= f.input :content %>
-    <%= f.input :attachment %>
-    <%= f.submit "送出"%>
-<% end %>
+<div id="submit-resume">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 service-space-wilder">
+                <h3 class="title">投交履历到<%= @job.title %></h3>
+                <div class="service-space-thinner">
+                </div>
+                <hr>
+                <div class="service-space-thinner">
+                </div>
+                <%= simple_form_for [@job,@resume] do |f| %>
+                    <%= f.input :content, label: "申请简历描述："%>
+                    <div class="service-space-thinner">
+                    </div>
+                    <%= f.input :attachment,label: "简历附件：" %>
+                    <div class="service-space-thinner">
+                    </div>
+                    <%= f.submit "提交", class: "btn btn-primary btn-lg"%>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>
