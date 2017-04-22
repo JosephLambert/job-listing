@@ -244,6 +244,16 @@ td.text-right {
 }
 }
 
+#job_section {
+  .panel-primary > .panel-heading {
+    color: #fff;
+    background-color: #f4511e;
+    border-color: #f4511e;
+}
+.panel-primary {
+    border-color: #000;
+}
+}
 //--------resume-new-----------
 
 #submit-resume {

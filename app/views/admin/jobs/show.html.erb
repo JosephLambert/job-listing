@@ -1,4 +1,35 @@
-<h1><%= @job.title %></h1>
-<p>
-    <%= simple_format(@job.description)%>
-</p>
+<div id="job-show">
+    <div class="container">
+        <div class="service-space-thinner">
+        </div>
+        <div class="service-space">
+            <h1 class="title"><i class="fa fa-envira">Job-Hunting</i></h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12 ">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center">
+                        <h2><%= @job.title %></h2>
+                    </div>
+                    <div class="panel-body">
+                        <div class="service-space-thinner">
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <p class="job-show-text">薪资下限：<%= @job.wage_lower_bound%></p>
+                            </li>
+                            <li class="list-group-item">
+                                <p class="job-show-text">薪资上限：<%= @job.wage_upper_bound%></p>
+                            </li>
+                            <li class="list-group-item">
+                                <p class="job-show-text"><%= @job.description%></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-space-wilder">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,102 +1,75 @@
-<div id="jobs_index_section1">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <div id="jobs-index-carousel" class="carousel slide text-center" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#jobs-index-carousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#jobs-index-carousel" data-slide-to="1"></li>
-                        <li data-target="#jobs-index-carousel" data-slide-to="2"></li>
-                    </ol>
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox">
-                        <div class="item active">
-                            <h4 id="carousel1">Ruby on Rails 开发工程师 -「名事集团」<br>
-                                <span style="font-style:normal;">18-24万 1年以上工作经验 上海</span></h4>
+<div id="job-index">
+    <div id="jobs_index_section1">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="jobs-index-carousel" class="carousel slide text-center" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#jobs-index-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#jobs-index-carousel" data-slide-to="1"></li>
+                            <li data-target="#jobs-index-carousel" data-slide-to="2"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <h4 id="carousel1">Ruby on Rails 开发工程师 -「名事集团」<br>
+                                    <span style="font-style:normal;">18-24万 1年以上工作经验 上海</span></h4>
+                            </div>
+                            <div class="item">
+                                <h4 id="carousel2">软件总监 -「酷比」<br>
+                                    <span style="font-style:normal;">45-75万 5年以上工作经验 深圳</span></h4>
+                            </div>
+                            <div class="item">
+                                <h4 id="carousel3">招采主管 - 「国美地产控股有限集团」<br>
+                                    <span style="font-style:normal;">12-18万 5年以上工作经验 成都</span></h4>
+                            </div>
                         </div>
-                        <div class="item">
-                            <h4 id="carousel2">软件总监 -「酷比」<br>
-                                <span style="font-style:normal;">45-75万 5年以上工作经验 深圳</span></h4>
-                        </div>
-                        <div class="item">
-                            <h4 id="carousel3">招采主管 - 「国美地产控股有限集团」<br>
-                                <span style="font-style:normal;">12-18万 5年以上工作经验 成都</span></h4>
-                        </div>
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#jobs-index-carousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#jobs-index-carousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
-                    <!-- Left and right controls -->
-                    <a class="left carousel-control" href="#jobs-index-carousel" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#jobs-index-carousel" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div class="service-space-wilder">
-</div>
-<div id="job_section">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-2">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-10 col-md-offset-2">
-                            <div class="dropdown" style="margin-top:20px;">
-                                <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown">排序
+    <div class="service-space-wilder">
+    </div>
+    <div id="job_section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-2">
+                                <div class="dropdown" style="margin-top:20px;">
+                                    <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown">排序
                                   <span class="caret"></span></button>
-                                <ul class="dropdown-menu">
-                                    <li style="width:172px;"><%= link_to("按照薪资上限排序", jobs_path(:order => "by_upper_bound"))%></li>
-                                    <li class="divider"></li>
-                                    <li style="width:172px;"><%= link_to("按照薪资下限排序", jobs_path(:order => "by_lower_bound"))%></li>
-                                    <li class="divider"></li>
-                                    <li style="width:172px;"><%= link_to("按照发表时间排序", jobs_path)%></li>
-                                </ul>
+                                    <ul class="dropdown-menu">
+                                        <li style="width:172px;"><%= link_to("按照薪资上限排序", jobs_path(:order => "by_upper_bound"))%></li>
+                                        <li class="divider"></li>
+                                        <li style="width:172px;"><%= link_to("按照薪资下限排序", jobs_path(:order => "by_lower_bound"))%></li>
+                                        <li class="divider"></li>
+                                        <li style="width:172px;"><%= link_to("按照发表时间排序", jobs_path)%></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-10" >
-                <div class="container-fluid">
-                    <div class="row service-space-wilder">
-                        <div class="col-md-8 col-md-offset-2">
-                            <div class="table-title">
-                                <h3>Job-Hunting</h3>
+                <div class="col-md-10" >
+                    <div class="container-fluid">
+                        <div class="row service-space-wilder">
+                            <div class="col-md-8 col-md-offset-2">
+                                <h1 class="title service-space">职位列表</h1>
+                                <%= render :partial => "job-item", :collection => @jobs, :as => :job %>
                             </div>
-                            <table class="table-fill ">
-                                <thead>
-                                    <tr>
-                                        <th class="text-left">职缺</th>
-                                        <th class="text-left">薪资下限</th>
-                                        <th class="text-left">薪资上限</th>
-                                        <th class="text-left"> 刊登时间</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="table-hover">
-                                    <% @jobs.each do |job| %>
-                                        <tr>
-                                            <td class="text-left">
-                                                <%= link_to(job.title, job_path(job))%>
-                                            </td>
-                                            <td class="text-left">
-                                                <%= job.wage_lower_bound %>
-                                            </td>
-                                            <td class="text-left">
-                                                <%= job.wage_upper_bound %>
-                                            </td>
-                                            <td class="text-left">
-                                                <%= job.created_at %>
-                                            </td>
-                                        </tr>
-                                    <% end %>
-                                </tbody>
-                            </table>
                         </div>
                     </div>
                 </div>

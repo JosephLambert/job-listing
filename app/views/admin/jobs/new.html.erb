@@ -1,10 +1,65 @@
-<h1>Add a job</h1>
-<%= simple_form_for [:admin,@job] do |f| %>
-    <%= f.input :title %>
-    <%= f.input :description %>
-    <%= f.input :wage_lower_bound, :label => "薪资下限"%>
-    <%= f.input :wage_upper_bound, :label => "薪资上限"%>
-    <%= f.input :contact_email %>
-    <%= f.input :is_hidden%>
-    <%= f.submit "Submit"%>
-<% end %>
+<div class="container" id="job-create">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="admin_job_form">
+                <h1 class="title">New a job</h1>
+                <%= simple_form_for [:admin,@job] do |f| %>
+                    <%= f.input :title, :label => "职位标题",class:" form-control" %>
+                    <%= f.input :description,:label => "职位描述" %>
+                    <%= f.input :wage_lower_bound, :label => "薪资下限"%>
+                    <%= f.input :wage_upper_bound, :label => "薪资上限"%>
+                    <%= f.input :contact_email, :label => "联系方式" %>
+                    <%= f.input :is_hidden,:label => "是否隐藏"%>
+                    <div class="text-center">
+                        <%= f.submit "提交", class: "btn job-create-btn"%>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+                // Test for placeholder support
+                  $.support.placeholder = (function(){
+                      var i = document.createElement('input');
+                      return 'placeholder' in i;
+                  })();
+
+                  // Hide labels by default if placeholders are supported
+                  if($.support.placeholder) {
+                      $('.form-label').each(function(){
+                          $(this).addClass('js-hide-label');
+                      });
+
+                      // Code for adding/removing classes here
+                      $('.form-group').find('input, textarea').on('keyup blur focus', function(e){
+
+                          // Cache our selectors
+                          var $this = $(this),
+                              $parent = $this.parent().find("label");
+
+                          if (e.type == 'keyup') {
+                              if( $this.val() == '' ) {
+                                  $parent.addClass('js-hide-label');
+                              } else {
+                                  $parent.removeClass('js-hide-label');
+                              }
+                          }
+                          else if (e.type == 'blur') {
+                              if( $this.val() == '' ) {
+                                  $parent.addClass('js-hide-label');
+                              }
+                              else {
+                                  $parent.removeClass('js-hide-label').addClass('js-unhighlight-label');
+                              }
+                          }
+                          else if (e.type == 'focus') {
+                              if( $this.val() !== '' ) {
+                                  $parent.removeClass('js-unhighlight-label');
+                              }
+                          }
+                      });
+                  }
+                });
+</script>
