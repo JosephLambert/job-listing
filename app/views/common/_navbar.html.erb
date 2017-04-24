@@ -25,17 +25,20 @@
                                 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu">
-                                <% if current_user.admin? %>
-                                    <li><a href="/admin/jobs"><i class="fa fa-wrench" aria-hidden="true"></i>后台管理</a></li>
-                                <% end %>
-                                <li><a rel="nofollow" data-method="delete" href="/users/sign_out"><i class="fa fa-sign-out" aria-hidden="true"></i>登出</a></li>
-                            </ul>
-                        </li>
-                    <% end %>
-                </li>
-            </ul>
-        </div>
-        <!--/.navbar-collapse  -->
+                                <% if !current_user.admin? %>
+                                    <li><a href="/account/jobs"><i class="fa fa-paw" aria-hidden="true"></i></i>我的投递</a></li>
+                            <% end %>
+                            <% if current_user.admin? %>
+                                <li><a href="/admin/jobs"><i class="fa fa-wrench" aria-hidden="true"></i>后台管理</a></li>
+                            <% end %>
+                            <li><a rel="nofollow" data-method="delete" href="/users/sign_out"><i class="fa fa-sign-out" aria-hidden="true"></i>登出</a></li>
+                        </ul>
+                    </li>
+                <% end %>
+            </li>
+        </ul>
     </div>
-    <!--/.container-fluid  -->
+    <!--/.navbar-collapse  -->
+</div>
+<!--/.container-fluid  -->
 </nav>
