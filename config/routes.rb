@@ -18,7 +18,10 @@ Rails.application.routes.draw do
             end
             resources :resumes
         end
+        resources :feedbacks
     end
+
+    resources :feedbacks
 
     get 'aboutus', to: 'welcome#aboutus'
 

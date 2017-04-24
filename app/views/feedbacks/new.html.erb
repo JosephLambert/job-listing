@@ -1,0 +1,43 @@
+<div class="service-space">
+</div>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="container-fluid bg-grey">
+                    <div class="service-space">
+                    </div>
+                    <h2 class="text-center title service-space">Contact Us</h2>
+                    <div class="row">
+                        <div class="col-sm-6 service-space">
+                            <p class="description service-space-thinner">有问题或者建议可以联系我们，24小时内会给您回复。</p>
+                            <p class="description service-space-thinner"><span class="glyphicon glyphicon-map-marker"></span> Beijing, China</p>
+                            <p class="description service-space-thinner"><span class="glyphicon glyphicon-phone"></span> +010 1234321</p>
+                            <p class="description"><span class="glyphicon glyphicon-envelope"></span> yanlei19930516@163.com</p>
+                        </div>
+                        <div class="col-sm-6 service-space-wilder" style="margin-top:10px;">
+                            <div class="row service-space-thinner">
+                                <div class="col-md-12">
+                                    <%= simple_form_for @feedback do |f| %>
+                                        <%= f.input :name, :label => "姓名",class:" form-control" %>
+                                        <div class="service-space-thinner">
+                                        </div>
+                                        <%= f.input :email,:label => "邮箱"%>
+                                        <div class="service-space-thinner">
+                                        </div>
+                                        <%= f.input :comment,:label => "问题或者建议"%>
+                                        <div class="service-space-thinner">
+                                        </div>
+                                        <div class="text-center">
+                                            <%= f.submit "提交", class: "btn job-create-btn"%>
+                                        </div>
+                                    <% end %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

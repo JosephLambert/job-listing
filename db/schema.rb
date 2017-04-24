@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170424025321) do
+ActiveRecord::Schema.define(version: 20170424061339) do
+
+  create_table "feedbacks", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.text     "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "job_relationships", force: :cascade do |t|
     t.integer  "job_id"

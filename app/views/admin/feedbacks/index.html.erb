@@ -1,0 +1,48 @@
+<div class="job-table" id="admin_feedbacks_table">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 service-space-thinner">
+                <div class="table-title">
+                    <h3>用户提交的反馈意见：</h3>
+                </div>
+                <table class="table-fill">
+                    <thead>
+                        <tr>
+                            <th class="text-left">
+                                姓名
+                            </th>
+                            <th class="text-left">
+                                邮箱
+                            </th>
+                            <th class="text-left">
+                                问题或者建议
+                            </th>
+                            <th class="text-left">
+                                提交时间
+                            </th>
+                            <th class="text-left">
+                                选项
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-hover">
+                        <% @feedbacks.each do |feedback| %>
+                            <tr>
+                                <td class="text-left"> <%= feedback.name %> </td>
+                                <td class="text-left"> <%= feedback.email %> </td>
+                                <td class="text-left"> <%= feedback.comment %> </td>
+                                <td class="text-left"> <%= feedback.created_at %> </td>
+                                <td class="text-left">
+                                    <%= link_to admin_feedback_path(feedback),method: :delete  do %>
+                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                    <% end %>
+                                </td>
+                            </tr>
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="text-center service-space-thinner">  <%= will_paginate @feedbacks, class: "apple_pagination" %></div>
+    </div>
+</div>
