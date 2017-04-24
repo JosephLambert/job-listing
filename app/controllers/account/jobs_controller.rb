@@ -6,6 +6,6 @@ class Account::JobsController < ApplicationController
     end
 
     def index
-        @jobs = current_user.applied_jobs.recent
+        @jobs = current_user.applied_jobs.recent.paginate(page: params[:page], per_page: 5)
     end
 end

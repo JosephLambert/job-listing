@@ -4,6 +4,7 @@
             <div class="col-md-8 col-md-offset-2">
                 <h1 class="title service-space">已投递</h1>
                 <%= render :partial => "job-item", :collection => @jobs, :as => :job %>
+                <div class="text-center service-space-thinner">  <%= will_paginate @jobs, class: "apple_pagination" %></div>
             </div>
         </div>
     </div>

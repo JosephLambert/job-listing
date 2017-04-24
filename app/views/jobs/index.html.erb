@@ -65,10 +65,11 @@
                 </div>
                 <div class="col-md-10" >
                     <div class="container-fluid">
-                        <div class="row service-space-wilder">
+                        <div class="row ">
                             <div class="col-md-8 col-md-offset-2">
                                 <h1 class="title service-space">职位列表</h1>
                                 <%= render :partial => "job-item", :collection => @jobs, :as => :job %>
+                                <div class="text-center service-space-thinner">  <%= will_paginate @jobs, class: "apple_pagination" %></div>
                             </div>
                         </div>
                     </div>

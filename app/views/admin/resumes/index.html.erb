@@ -5,6 +5,7 @@
                 <h2 class="title"> <%= @job.title %> - 履历列表 </h2>
                 <hr class="service-space-thinner">
                 <%= render :partial => "resume", :collection => @resumes, :as => :resume %>
+                <div class="text-center service-space-thinner">  <%= will_paginate @jobs, class: "apple_pagination" %></div>
             </div>
         </div>
     </div>
