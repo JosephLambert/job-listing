@@ -16,13 +16,22 @@
                         </div>
                         <ul class="list-group">
                             <li class="list-group-item">
+                                <p class="job-show-text">类别： <%= @job.category %></p>
+                            </li>
+                            <li class="list-group-item">
+                                <p class="job-show-text">公司名称： <%= @job.company %></p>
+                            </li>
+                            <li class="list-group-item">
+                                <p class="job-show-text">地理坐标： <%= @job.location %></p>
+                            </li>
+                            <li class="list-group-item">
                                 <p class="job-show-text">薪资下限：<%= @job.wage_lower_bound%></p>
                             </li>
                             <li class="list-group-item">
                                 <p class="job-show-text">薪资上限：<%= @job.wage_upper_bound%></p>
                             </li>
                             <li class="list-group-item">
-                                <p class="job-show-text"><%= @job.description%></p>
+                                <p class="job-show-text">招聘要求：<%= @job.description%></p>
                             </li>
                         </ul>
                     </div>
