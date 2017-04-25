@@ -27,9 +27,7 @@
                                 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu">
-                                <% if !current_user.admin? %>
-                                    <li><a href="/account/jobs"><i class="fa fa-paw" aria-hidden="true"></i></i>我的投递</a></li>
-                            <% end %>
+                                <li><a href="/account/jobs"><i class="fa fa-paw" aria-hidden="true"></i></i>我的投递</a></li>
                             <% if current_user.admin? %>
                                 <li><a href="/admin/jobs"><i class="fa fa-wrench" aria-hidden="true"></i>后台管理</a></li>
                             <% end %>

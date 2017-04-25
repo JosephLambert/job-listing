@@ -3,14 +3,19 @@ Rails.application.routes.draw do
     # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
     resources :jobs do
-        resources :resumes
+        member do
+            post :addfav
+            post :quitfav
+        end
         collection do
             get :search
         end
+        resources :resumes
     end
 
     namespace :account do
         resources :jobs
+        resources :favorites
     end
 
     namespace :admin do

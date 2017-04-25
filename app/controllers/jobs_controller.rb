@@ -61,6 +61,30 @@ class JobsController < ApplicationController
       end
     end
 
+    def addfav
+        @job = Job.find(params[:id])
+        if !current_user.is_member_of_fav_jobs?(@job)
+            current_user.add_fav!(@job)
+            flash[:notice] = '您成功收藏此职位'
+        else
+            flash[:warning] = '你已收藏此职位'
+
+        end
+        redirect_to :back
+        end
+
+    def quitfav
+        @job = Job.find(params[:id])
+        if  current_user.is_member_of_fav_jobs?(@job)
+            current_user.quit_fav!(@job)
+            flash[:notice] = '您成功取消收藏此职位'
+        else
+            flash[:warning] = '你没有收藏此职位该怎么取消收藏此职位XD'
+
+        end
+        redirect_to :back
+    end
+
     protected
 
     def validate_search_key

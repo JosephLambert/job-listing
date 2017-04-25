@@ -1,10 +1,10 @@
-<div id="job_section">
+<div id="fav_jobs_section">
     <div class="container-fluid">
         <div class="row service-space-wilder">
             <div class="col-md-6 col-md-offset-3">
                 <div class="service-space">
                 </div>
-                <h1 class="title service-space">已投递</h1>
+                <h1 class="title service-space">已收藏</h1>
                 <%= render :partial => "job-item", :collection => @jobs, :as => :job %>
                 <div class="text-center service-space-thinner">  <%= will_paginate @jobs, class: "apple_pagination" %></div>
             </div>
