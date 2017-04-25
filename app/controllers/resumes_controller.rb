@@ -1,5 +1,5 @@
 class ResumesController < ApplicationController
-    before_action :authenticate_user!
+    before_action :authenticate_user!, only: [:new, :create, :update, :edit, :destroy]
 
     def new
         @job = Job.find(params[:job_id])

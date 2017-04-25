@@ -1,6 +1,11 @@
 <div class="container" id="job-create">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
+            <div class="service-space-thinner">
+            </div>
+            <div class="pull-right">
+                <%= link_to(content_tag(:i, "返回", class: "fa fa-arrow-left back-btn"), url_for(:back)) %>
+            </div>
             <div class="admin_job_form">
                 <h1 class="title">Edit a job</h1>
                 <%= simple_form_for [:admin,@job] do |f| %>
@@ -23,46 +28,46 @@
 </div>
 <script>
     $(document).ready(function() {
-                // Test for placeholder support
-                  $.support.placeholder = (function(){
-                      var i = document.createElement('input');
-                      return 'placeholder' in i;
-                  })();
+                            // Test for placeholder support
+                              $.support.placeholder = (function(){
+                                  var i = document.createElement('input');
+                                  return 'placeholder' in i;
+                              })();
 
-                  // Hide labels by default if placeholders are supported
-                  if($.support.placeholder) {
-                      $('.form-label').each(function(){
-                          $(this).addClass('js-hide-label');
-                      });
+                              // Hide labels by default if placeholders are supported
+                              if($.support.placeholder) {
+                                  $('.form-label').each(function(){
+                                      $(this).addClass('js-hide-label');
+                                  });
 
-                      // Code for adding/removing classes here
-                      $('.form-group').find('input, textarea').on('keyup blur focus', function(e){
+                                  // Code for adding/removing classes here
+                                  $('.form-group').find('input, textarea').on('keyup blur focus', function(e){
 
-                          // Cache our selectors
-                          var $this = $(this),
-                              $parent = $this.parent().find("label");
+                                      // Cache our selectors
+                                      var $this = $(this),
+                                          $parent = $this.parent().find("label");
 
-                          if (e.type == 'keyup') {
-                              if( $this.val() == '' ) {
-                                  $parent.addClass('js-hide-label');
-                              } else {
-                                  $parent.removeClass('js-hide-label');
+                                      if (e.type == 'keyup') {
+                                          if( $this.val() == '' ) {
+                                              $parent.addClass('js-hide-label');
+                                          } else {
+                                              $parent.removeClass('js-hide-label');
+                                          }
+                                      }
+                                      else if (e.type == 'blur') {
+                                          if( $this.val() == '' ) {
+                                              $parent.addClass('js-hide-label');
+                                          }
+                                          else {
+                                              $parent.removeClass('js-hide-label').addClass('js-unhighlight-label');
+                                          }
+                                      }
+                                      else if (e.type == 'focus') {
+                                          if( $this.val() !== '' ) {
+                                              $parent.removeClass('js-unhighlight-label');
+                                          }
+                                      }
+                                  });
                               }
-                          }
-                          else if (e.type == 'blur') {
-                              if( $this.val() == '' ) {
-                                  $parent.addClass('js-hide-label');
-                              }
-                              else {
-                                  $parent.removeClass('js-hide-label').addClass('js-unhighlight-label');
-                              }
-                          }
-                          else if (e.type == 'focus') {
-                              if( $this.val() !== '' ) {
-                                  $parent.removeClass('js-unhighlight-label');
-                              }
-                          }
-                      });
-                  }
-                });
+                            });
 </script>

@@ -1,5 +1,5 @@
 class Admin::JobsController < ApplicationController
-    before_action :authenticate_user!, only: [:new, :create, :update, :edit, :destroy]
+    before_action :authenticate_user!, only: [:show, :index, :new, :create, :update, :edit, :destroy]
     before_filter :require_is_admin
     layout 'admin'
     def show

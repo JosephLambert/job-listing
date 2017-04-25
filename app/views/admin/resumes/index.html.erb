@@ -2,6 +2,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
+                <div class="service-space-thinner">
+                </div>
+                <div class="pull-right">
+                    <%= link_to(content_tag(:i, "返回", class: "fa fa-arrow-left back-btn"), url_for(:back)) %>
+                </div>
                 <h2 class="title"> <%= @job.title %> - 履历列表 </h2>
                 <hr class="service-space-thinner">
                 <%= render :partial => "resume", :collection => @resumes, :as => :resume %>
