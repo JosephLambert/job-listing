@@ -4,7 +4,7 @@ class Admin::FeedbacksController < ApplicationController
     layout 'admin'
 
     def index
-        @feedbacks = Feedback.all.paginate(page: params[:page], per_page: 10)
+        @feedbacks = Feedback.all.order('created_at DESC').paginate(page: params[:page], per_page: 10)
     end
 
     def destroy

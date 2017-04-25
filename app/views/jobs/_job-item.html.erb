@@ -11,14 +11,12 @@
                     <li>
                         <% if current_user && current_user.is_member_of_fav_jobs?(job) %>
                             <%= link_to quitfav_job_path(job), method: :post ,style:"color:#000;" do %>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
                             <% end %>
-                            <label class="label label-success">已收藏</label>
                         <% else %>
                             <%= link_to addfav_job_path(job), method: :post ,style:"color:#000;" do %>
                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                             <% end %>
-                            <label class="label label-default">未收藏</label>
                         <% end %>
                     </li>
                     <li>

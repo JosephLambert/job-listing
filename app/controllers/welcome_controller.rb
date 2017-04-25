@@ -1,6 +1,8 @@
 class WelcomeController < ApplicationController
     layout 'landingpage'
-    def index; end
+    def index
+        flash[:notice] = '欢迎来到Job-Hunting！'
+     end
 
     def aboutus; end
 
