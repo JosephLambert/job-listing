@@ -244,7 +244,7 @@ td.text-right {
 }
 }
 
-#job_section {
+#job_section,#search_page {
   .panel-primary > .panel-heading {
     color: #fff;
     background-color: #f4511e;
@@ -270,4 +270,11 @@ td.text-right {
     background-color: #f4511e;
     border-color: #f4511e;
 }
+}
+
+
+//------------search page-----------
+
+.search-info-title {
+  font-weight: 200;
 }

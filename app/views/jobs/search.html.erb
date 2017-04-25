@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div id="search_page">
+                <div class="service-space-thinner">
+                </div>
+                <br>
+                <% if @query_string.blank? %>
+                    <h2 class="search-info-title">  Sorry, The search content cannot be blank, please type some information into to search.</h2>
+                <% elsif @jobs.blank? %>
+                    <br>
+                    <h2 class="search-info-title">Opps! No any results matched, please try again.</h2>
+                <% else %>
+                    <h2 class="search-info-title"> 有关"<%= @query_string %>"的工作信息 </h2>
+                    <div class="container-fluid ">
+                        <div class="row ">
+                            <div class="col-md-12">
+                                <h1 class="title service-space">职位列表</h1>
+                                <%= render :partial => "job-item", :collection => @jobs, :as => :job %>
+                                <div class="text-center service-space">  <%= will_paginate @jobs, class: "apple_pagination" %></div>
+                            </div>
+                        </div>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>
