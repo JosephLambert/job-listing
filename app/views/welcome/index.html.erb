@@ -22,17 +22,17 @@
         <hr class="service-space-thinner">
         <div class="row service-space-thinner">
             <div class="col-sm-4">
-                <span class="glyphicon glyphicon-thumbs-up service-img service-space-thinner"></span>
+                <span class="glyphicon glyphicon-thumbs-up service-img service-space-thinner slideanim"></span>
                 <h4 class="service-header service-space-thinner">更好</h4>
                 <p class="service-text service-space-thinner">提供更高质量的职位，再也不用担心鱼龙混杂的求职信息</p>
             </div>
             <div class="col-sm-4">
-                <span class="glyphicon glyphicon-plane service-img service-space-thinner"></span>
+                <span class="glyphicon glyphicon-plane service-img service-space-thinner slideanim"></span>
                 <h4 class="service-header service-space-thinner">更快</h4>
                 <p class="service-text service-space-thinner">简洁高效的招聘流程，再也不用担心繁琐的应聘流程</p>
             </div>
             <div class="col-sm-4">
-                <span class="glyphicon glyphicon-wrench service-img service-space-thinner"></span>
+                <span class="glyphicon glyphicon-wrench service-img service-space-thinner slideanim"></span>
                 <h4 class="service-header service-space-thinner">更多</h4>
                 <p class="service-text service-space-thinner">得到HR更多的反馈，再也不用担心简历石沉大海</p>
             </div>
@@ -49,7 +49,7 @@
                     <h2 class="section-heading"><span class="glyphicon glyphicon-pencil service-icon"></span>一、精心准备好你的简历</h2>
                     <p class="lead">一份精心修改的简历可以让你从众多求职者中脱引而出</p>
                 </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6 slideanim">
                     <%= image_tag 'pic-1.jpg', class: 'img-responsive' %>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                     <h2 class="section-heading"><span class="glyphicon glyphicon-cloud-upload service-icon"></span>二、选择并且投递</h2>
                     <p class="lead">通过筛选机制，找到合适自己的职位上传简历</p>
                 </div>
-                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6 slideanim">
                     <%= image_tag 'pic-2.jpg', class: 'img-responsive' %>
                 </div>
             </div>
@@ -79,7 +79,7 @@
                     <h2 class="section-heading"><span class="glyphicon glyphicon-ok service-icon"></span>三、得到offer！</h2>
                     <p class="lead">得到满意的职位或者根据HR反馈做出改进再次投递</p>
                 </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6 slideanim">
                     <%= image_tag 'pic-3.jpg', class: 'img-responsive' %>
                 </div>
             </div>
@@ -96,7 +96,7 @@
         <h2>使用者见证：</h2>
         <div class="row service-space">
             <div class="col-md-4">
-                <blockquote class="quote-box" style="height:280px;">
+                <blockquote class="quote-box" style="height:353px;" >
                     <p class="quotation-mark">
                         “
       </p>
@@ -133,7 +133,7 @@
                     </blockquote>
                 </div>
                 <div class="col-md-4">
-                    <blockquote class="quote-box" style="height:280px;">
+                    <blockquote class="quote-box " style="height:353px;">
                         <p class="quotation-mark">
                             “
     </p>
@@ -218,28 +218,28 @@
     </div>
     <script>
         $(document).ready(function(){
-                                                                                                  // Add smooth scrolling to all links in navbar + footer link
-                                                                                                  $(".navbar a, footer a[href='#welcome-body']").on('click', function(event) {
+                                                                                                                                                                  // Add smooth scrolling to all links in navbar + footer link
+                                                                                                                                                                  $(".navbar a, footer a[href='#welcome-body']").on('click', function(event) {
 
-                                                                                                   // Make sure this.hash has a value before overriding default behavior
-                                                                                                  if (this.hash !== "") {
+                                                                                                                                                                   // Make sure this.hash has a value before overriding default behavior
+                                                                                                                                                                  if (this.hash !== "") {
 
-                                                                                                    // Prevent default anchor click behavior
-                                                                                                    event.preventDefault();
+                                                                                                                                                                    // Prevent default anchor click behavior
+                                                                                                                                                                    event.preventDefault();
 
-                                                                                                    // Store hash
-                                                                                                    var hash = this.hash;
+                                                                                                                                                                    // Store hash
+                                                                                                                                                                    var hash = this.hash;
 
-                                                                                                    // Using jQuery's animate() method to add smooth page scroll
-                                                                                                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-                                                                                                    $('html, body').animate({
-                                                                                                      scrollTop: $(hash).offset().top
-                                                                                                    }, 900, function(){
+                                                                                                                                                                    // Using jQuery's animate() method to add smooth page scroll
+                                                                                                                                                                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                                                                                                                                                                    $('html, body').animate({
+                                                                                                                                                                      scrollTop: $(hash).offset().top
+                                                                                                                                                                    }, 900, function(){
 
-                                                                                                      // Add hash (#) to URL when done scrolling (default click behavior)
-                                                                                                      window.location.hash = hash;
-                                                                                                      });
-                                                                                                    } // End if
-                                                                                                  });
-                                                                                                })
+                                                                                                                                                                      // Add hash (#) to URL when done scrolling (default click behavior)
+                                                                                                                                                                      window.location.hash = hash;
+                                                                                                                                                                      });
+                                                                                                                                                                    } // End if
+                                                                                                                                                                  });
+                                                                                                                                                                })
     </script>
