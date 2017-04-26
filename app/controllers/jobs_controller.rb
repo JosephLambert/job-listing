@@ -2,17 +2,27 @@ class JobsController < ApplicationController
     before_action :authenticate_user!, only: [:new, :create, :update, :edit, :destroy, :addfav, :quitfav]
     before_action :validate_search_key, only: [:search]
     def index
-        @jobs = case params[:order]
-                when 'by_lower_bound'
-                    Job.published.order('wage_lower_bound DESC').paginate(page: params[:page], per_page: 5)
+        if params[:category].present?
+            @category = params[:category]
+            if @category == '所有类型'
+                @jobs = Job.published.recent.paginate(page: params[:page], per_page: 5)
+            else
+                @jobs = Job.where(is_hidden: false, category: @category).recent.paginate(page: params[:page], per_page: 5)
+            end
 
-                when 'by_upper_bound'
-                    Job.published.order('wage_upper_bound DESC').paginate(page: params[:page], per_page: 5)
+        # 判断是否筛选薪水 #
+        elsif params[:order].present?
+            @wage = params[:order]
+            if @wage == '薪资上限'
+                @jobs = Job.published.order('wage_upper_bound DESC').paginate(page: params[:page], per_page: 5)
+            else @wage == '薪资下限'
+                 @jobs = Job.published.order('wage_lower_bound DESC').paginate(page: params[:page], per_page: 5)
+            end
 
-                else
-                    Job.published.recent.paginate(page: params[:page], per_page: 5)
-
-    end
+        # 预设显示所有公开职位 #
+        else
+            @jobs = Job.published.recent.paginate(page: params[:page], per_page: 5)
+        end
   end
 
     def show

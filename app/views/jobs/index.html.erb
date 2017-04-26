@@ -39,39 +39,74 @@
             </div>
         </div>
     </div>
-    <div class="service-space-wilder">
-    </div>
     <div id="job_section">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
-                <div class="col-md-2">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-10 col-md-offset-2">
-                                <div class="dropdown" style="margin-top:20px;">
-                                    <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown">排序
-                                  <span class="caret"></span></button>
-                                    <ul class="dropdown-menu">
-                                        <li style="width:172px;"><%= link_to("按照薪资上限排序", jobs_path(:order => "by_upper_bound"))%></li>
-                                        <li class="divider"></li>
-                                        <li style="width:172px;"><%= link_to("按照薪资下限排序", jobs_path(:order => "by_lower_bound"))%></li>
-                                        <li class="divider"></li>
-                                        <li style="width:172px;"><%= link_to("按照发表时间排序", jobs_path)%></li>
-                                    </ul>
-                                </div>
-                            </div>
+                <div class="col-md-3">
+                    <div class="service-space">
+                    </div>
+                    <div class="btn-group pull-middle" role="group" aria-label="..." id="filter-btn">
+                        <div class="dropdown btn-group clearfix">
+                            <% if params[:category].present? %>
+                                <button class="btn btn-success dropdown-toggle"  type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <%= params[:category] %> <span class="caret"></span>
+                                </button>
+                            <% else %>
+                                <button class="btn btn-success dropdown-toggle"  type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    职位类型 <span class="caret"></span>
+                                </button>
+                            <% end %>
+                            <ul class="dropdown-menu ">
+                                <li><%= link_to("IT", jobs_path(:category => "IT")) %></li>
+                                <li class="divider"></li>
+                                <li><%= link_to("公益", jobs_path(:category => "公益")) %></li>
+                                <li class="divider"></li>
+                                <li><%= link_to("金融", jobs_path(:category => "金融")) %></li>
+                                <li class="divider"></li>
+                                <li><%= link_to("教育", jobs_path(:category => "教育")) %></li>
+                                <li class="divider"></li>
+                                <li><%= link_to("管理", jobs_path(:category => "管理")) %></li>
+                                <li class="divider"></li>
+                                <li><%= link_to("法律", jobs_path(:category => "法律")) %></li>
+                                <li class="divider"></li>
+                                <li><%= link_to("HR", jobs_path(:category => "HR")) %></li>
+                                <li class="divider"></li>
+                                <li><%= link_to("市场", jobs_path(:category => "市场")) %></li>
+                                <li class="divider"></li>
+                                <li><%= link_to("健康医疗", jobs_path(:category => "健康医疗")) %></li>
+                                <li class="divider"></li>
+                                <li><%= link_to("设计", jobs_path(:category => "设计")) %></li>
+                                <li class="divider"></li>
+                                <li><%= link_to("所有类型", jobs_path(:category => "所有类型")) %></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown btn-group clearfix"  >
+                            <% if params[:order].present? %>
+                                <button class="btn btn-success dropdown-toggle"  type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <%= params[:order] %> <span class="caret"></span>
+                                </button>
+                            <% else %>
+                                <button class="btn btn-success dropdown-toggle"   type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    薪资 <span class="caret"></span>
+                                </button>
+                            <% end %>
+                            <ul class="dropdown-menu">
+                                <li><%= link_to("薪资上限", jobs_path(:order => "薪资上限"))%></li>
+                                <li class="divider"></li>
+                                <li><%= link_to("薪资下限", jobs_path(:order => "薪资下限"))%></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-10" >
+                <div class="col-md-9" >
                     <div class="container-fluid">
-                        <div class="service-space-thinner">
+                        <div class="service-space">
                         </div>
                         <div class="pull-right">
                             <%= link_to(content_tag(:i, "返回", class: "fa fa-arrow-left back-btn"), url_for(:back)) %>
                         </div>
                         <div class="row ">
-                            <div class="col-md-8 col-md-offset-2">
+                            <div class="col-md-12">
                                 <h1 class="title service-space">职位列表</h1>
                                 <%= render :partial => "job-item", :collection => @jobs, :as => :job %>
                                 <div class="text-center service-space-thinner">  <%= will_paginate @jobs, class: "apple_pagination" %></div>

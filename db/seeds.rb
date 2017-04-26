@@ -9,7 +9,7 @@ puts 'Admin account created.'
 
 create_account_user = User.create([email: '478911359@b.com', password: '123456', password_confirmation: '123456', is_admin: 'false'])
 
-puts 'User account created.'
+puts 'User account created..'
 
 company_info = [['Apple Inc.', 'Cupertino, CA, US'],
                 ['Samsung Electronics', 'Suwon, South Korea'],
@@ -34,15 +34,15 @@ jobs_info = [['Web Application Developer', 'Creates, maintains and implements we
              ['Secretary', 'A secretary or personal assistant is a person whose work consists of supporting management, including executives, using a variety of project management, communication, or organizational skills.']]
 
 category_and_contact_info = [['IT', '111@111.com'],
-                             ['None-profit', '222@222.com'],
-                             ['Financial', '000@000.com'],
-                             ['Education', '333@333.com'],
-                             ['Administration', '444@444.com'],
-                             ['Legal', '555@555.com'],
+                             ['公益', '222@222.com'],
+                             ['金融', '000@000.com'],
+                             ['教育', '333@333.com'],
+                             ['管理', '444@444.com'],
+                             ['法律', '555@555.com'],
                              ['HR', '666@666.com'],
-                             ['Marketing', '777@777.com'],
-                             ['Health Care', '888@888.com'],
-                             ['Design', '999@999.com']]
+                             ['市场', '777@777.com'],
+                             ['健康医疗', '888@888.com'],
+                             ['设计', '999@999.com']]
 
 create_jobs = for i in 1..30 do
                   job_test = jobs_info[rand(0..9)]
