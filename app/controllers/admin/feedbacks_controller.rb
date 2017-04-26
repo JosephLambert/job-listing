@@ -10,6 +10,7 @@ class Admin::FeedbacksController < ApplicationController
     def destroy
         @feedback = Feedback.find(params[:id])
         @feedback.destroy
+        flash[:notice] = '您已删除此反馈'
         redirect_to admin_feedbacks_path
     end
 end

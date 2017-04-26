@@ -77,7 +77,7 @@ class JobsController < ApplicationController
         @job = Job.find(params[:id])
         if  current_user.is_member_of_fav_jobs?(@job)
             current_user.quit_fav!(@job)
-            flash[:notice] = '您成功取消收藏此职位'
+            flash[:notice] = '您已取消收藏此职位'
         else
             flash[:warning] = '你没有收藏此职位该怎么取消收藏此职位XD'
 
