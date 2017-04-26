@@ -97,6 +97,11 @@
                             </ul>
                         </div>
                     </div>
+                    <div style="margin-bottom:106px;">
+                    </div>
+                    <div class="row">
+                        <%= render :partial => "randomjob"%>
+                    </div>
                 </div>
                 <div class="col-md-9" >
                     <div class="container-fluid">
@@ -106,7 +111,7 @@
                             <%= link_to(content_tag(:i, "返回", class: "fa fa-arrow-left back-btn"), url_for(:back)) %>
                         </div>
                         <div class="row ">
-                            <div class="col-md-12">
+                            <div class="col-md-10 col-md-offset-1">
                                 <h1 class="title service-space">职位列表</h1>
                                 <%= render :partial => "job-item", :collection => @jobs, :as => :job %>
                                 <div class="text-center service-space-thinner">  <%= will_paginate @jobs, class: "apple_pagination" %></div>

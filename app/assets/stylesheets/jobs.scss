@@ -286,3 +286,48 @@ td.text-right {
   background-color: #00796B;
   border-color: #000;
 }
+
+
+//----------random jobs------
+
+
+
+  .suggest-title{
+    padding: 12.5px;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+  }
+
+
+  .suggest-content{
+    background-color: #fff;
+    padding: 7.5px;
+    border: 0.5px dashed #eee;
+
+    h3{
+      margin-top: 1px;
+      font-size: 16px;
+    }
+
+    p{
+      font-size: 16px;
+      color: #FF7D0A;
+      letter-spacing: -1px;
+    }
+
+    span{
+      color: #aaa;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  .side-box{
+  display: inline;
+  position: absolute;
+  padding-bottom: 12.5px;
+  background-color: #00796B;
+  color: #fff;
+  box-shadow: 2px 2px 3px #aaa;
+}

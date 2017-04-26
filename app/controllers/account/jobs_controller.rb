@@ -7,5 +7,6 @@ class Account::JobsController < ApplicationController
 
     def index
         @jobs = current_user.applied_jobs.recent.paginate(page: params[:page], per_page: 5)
+        @suggests = Job.published.random5
     end
 end

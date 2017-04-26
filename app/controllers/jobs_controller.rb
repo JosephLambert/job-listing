@@ -2,6 +2,7 @@ class JobsController < ApplicationController
     before_action :authenticate_user!, only: [:new, :create, :update, :edit, :destroy, :addfav, :quitfav]
     before_action :validate_search_key, only: [:search]
     def index
+        @suggests = Job.published.random5
         if params[:category].present?
             @category = params[:category]
             if @category == '所有类型'
@@ -69,6 +70,7 @@ class JobsController < ApplicationController
             search_result = Job.published.ransack(@search_criteria).result(distinct: true)
             @jobs = search_result.recent.paginate(page: params[:page], per_page: 5)
       end
+        @suggests = Job.published.random5
     end
 
     def addfav
@@ -103,7 +105,7 @@ class JobsController < ApplicationController
     end
 
     def search_criteria(query_string)
-        { title_or_location_or_company_cont: query_string }
+        { title_or_location_or_company_or_category_cont: query_string }
     end
 
     private

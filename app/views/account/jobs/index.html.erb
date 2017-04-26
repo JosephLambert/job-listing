@@ -6,16 +6,27 @@
             <div class="pull-right">
                 <%= link_to(content_tag(:i, "返回", class: "fa fa-arrow-left back-btn"), url_for(:back)) %>
             </div>
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-3">
+                <div style="margin-bottom:171px;">
+                </div>
+                <%= render :partial => "jobs/randomjob"%>
+            </div>
+            <div class="col-md-9">
                 <div class="service-space">
                 </div>
-                <h1 class="title service-space">已投递</h1>
-                <% if current_user.applied_jobs.blank?%>
-                    <h3 style="font-weight:200;">抱歉，您还未投递任何职位。</h3>
-                <% else %>
-                    <%= render :partial => "job-item", :collection => @jobs, :as => :job %>
-                <% end %>
-                <div class="text-center service-space-thinner">  <%= will_paginate @jobs, class: "apple_pagination" %></div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <h1 class="title service-space-thinner">已投递</h1>
+                            <% if current_user.applied_jobs.blank?%>
+                                <h3 style="font-weight:200;">抱歉，您还未投递任何职位。</h3>
+                            <% else %>
+                                <%= render :partial => "job-item", :collection => @jobs, :as => :job %>
+                            <% end %>
+                            <div class="text-center service-space-thinner">  <%= will_paginate @jobs, class: "apple_pagination" %></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
