@@ -1,10 +1,10 @@
 class Job < ApplicationRecord
-    has_many :resumes
-    has_many :job_relationships
+    has_many :resumes, dependent: :destroy
+    has_many :job_relationships, dependent: :destroy
     has_many :members, through: :job_relationships, source: :user
 
-    has_many :favorites
-    has_many :fav_relationships
+    has_many :favorites, dependent: :destroy
+    has_many :fav_relationships, dependent: :destroy
     has_many :favors, through: :fav_relationships, source: :user
 
     validates :title, presence: { message: '请填写职称' }
