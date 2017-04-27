@@ -29,7 +29,6 @@ class JobsController < ApplicationController
     def show
         @job = Job.find(params[:id])
 
-        # @category = @job.category
         # 随机推荐五个相同类型的职位（去除当前职位） #
         @sames = Job.where(is_hidden: false, category: @job.category).where.not(id: @job.id).random5
 
