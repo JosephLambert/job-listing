@@ -47,7 +47,18 @@
                     </div>
                 </div>
                 <hr>
-                <p><i class="fa fa-clock-o" aria-hidden="true"></i>: <%= job.created_at%></p>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p><i class="fa fa-clock-o" aria-hidden="true"></i>: <%= job.created_at%></p>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <%= link_to votejob_job_path(job),method: :post do %>
+                                <%= job.voted_users.count%> <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                            <% end %>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="service-space-thinner">

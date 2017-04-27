@@ -7,6 +7,10 @@ class Job < ApplicationRecord
     has_many :fav_relationships, dependent: :destroy
     has_many :favors, through: :fav_relationships, source: :user
 
+    has_many :votes
+    has_many :vote_relationships
+    has_many :voted_users, through: :vote_relationships, source: :user
+
     validates :title, presence: { message: '请填写职称' }
     validates :description, presence: { message: '请填写职位描述' }
     validates :wage_upper_bound, presence: { message: '请填写薪资上限' }

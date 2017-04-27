@@ -7,7 +7,7 @@ create_account = User.create([email: 'admin@test.com', password: '123456', passw
 
 puts 'Admin account created.'
 
-create_account_user = User.create([email: '478911359@b.com', password: '123456', password_confirmation: '123456', is_admin: 'false'])
+create_account_user = User.create([email: '478911359@qq.com', password: '123456', password_confirmation: '123456', is_admin: 'false'])
 
 puts 'User account created..'
 

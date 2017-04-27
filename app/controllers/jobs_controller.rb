@@ -100,6 +100,17 @@ class JobsController < ApplicationController
         redirect_to :back
     end
 
+    def votejob
+        @job = Job.find(params[:id])
+        if !current_user.voted_votes.include?(@job)
+            current_user.voted_votes << @job
+            flash[:notice] = '您成功对此职位点赞'
+        else
+            flash[:warning] = '同一个职位只能点赞一次哦'
+          end
+        redirect_to :back
+    end
+
     protected
 
     def validate_search_key

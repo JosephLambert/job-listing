@@ -21,7 +21,7 @@
                             <% if current_user.applied_jobs.blank?%>
                                 <h3 style="font-weight:200;">抱歉，您还未投递任何职位。</h3>
                             <% else %>
-                                <%= render :partial => "job-item", :collection => @jobs, :as => :job %>
+                                <%= render :partial => "jobs/job-item", :collection => @jobs, :as => :job %>
                             <% end %>
                             <div class="text-center service-space-thinner">  <%= will_paginate @jobs, class: "apple_pagination" %></div>
                         </div>

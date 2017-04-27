@@ -7,6 +7,10 @@ class User < ApplicationRecord
     has_many :fav_relationships
     has_many :fav_jobs, through: :fav_relationships, source: :job
 
+    has_many :votes
+    has_many :vote_relationships
+    has_many :voted_votes, through: :vote_relationships, source: :job
+
     # Include default devise modules. Others available are:
     # :confirmable, :lockable, :timeoutable and :omniauthable
     devise :database_authenticatable, :registerable,

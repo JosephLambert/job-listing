@@ -6,6 +6,7 @@ Rails.application.routes.draw do
         member do
             post :addfav
             post :quitfav
+            post :votejob
         end
         collection do
             get :search

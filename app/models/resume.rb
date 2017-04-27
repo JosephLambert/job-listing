@@ -4,5 +4,6 @@ class Resume < ApplicationRecord
 
     mount_uploader :attachment, AttachmentUploader
 
-    validates :content, presence: true
+    validates :content, presence: { message: '请填写简历描述' }
+    validates :attachment, presence: { message: '请选择简历文档' }
 end
