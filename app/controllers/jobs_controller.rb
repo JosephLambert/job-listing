@@ -29,8 +29,12 @@ class JobsController < ApplicationController
     def show
         @job = Job.find(params[:id])
 
-        flash[:warning] = 'This Job already archieved' if @job.is_hidden
-    end
+        # @category = @job.category
+        # 随机推荐五个相同类型的职位（去除当前职位） #
+        @sames = Job.where(is_hidden: false, category: @job.category).where.not(id: @job.id).random5
+
+        redirect_to root_path, alert: '此职缺暂未开放。' if @job.is_hidden
+  end
 
     def new
         @job = Job.new

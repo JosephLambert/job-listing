@@ -1,48 +1,80 @@
 <div id="job-show">
     <div class="container">
-        <div class="service-space-thinner">
+        <div class="service-space">
         </div>
         <div class="pull-right">
             <%= link_to(content_tag(:i, "返回", class: "fa fa-arrow-left back-btn"), url_for(:back)) %>
         </div>
-        <div class="service-space">
-            <h1 class="title"><i class="fa fa-envira">Job-Hunting</i></h1>
-        </div>
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div class="panel-heading text-center">
-                        <h2><%= @job.title %></h2>
-                    </div>
-                    <div class="panel-body">
-                        <div class="service-space-thinner">
+            <div class="col-md-9">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="service-space">
+                                <h1 class="title"><i class="fa fa-envira">Job-Hunting</i></h1>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading text-center">
+                                    <h2><%= @job.title %></h2>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="service-space-thinner">
+                                    </div>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <p class="job-show-text">类别： <%= @job.category %></p>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <p class="job-show-text">公司名称： <%= @job.company %></p>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <p class="job-show-text">地理坐标： <%= @job.location %></p>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <p class="job-show-text">薪资下限：<%= @job.wage_lower_bound%></p>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <p class="job-show-text">薪资上限：<%= @job.wage_upper_bound%></p>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <p class="job-show-text">招聘要求：<%= @job.description%></p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="panel-footer text-center"><%= link_to("投交履历", new_job_resume_path(@job), class: "btn btn-primary btn-lg")%></div>
+                            </div>
+                            <div class="service-space-wilder">
+                            </div>
                         </div>
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <p class="job-show-text">类别： <%= @job.category %></p>
-                            </li>
-                            <li class="list-group-item">
-                                <p class="job-show-text">公司名称： <%= @job.company %></p>
-                            </li>
-                            <li class="list-group-item">
-                                <p class="job-show-text">地理坐标： <%= @job.location %></p>
-                            </li>
-                            <li class="list-group-item">
-                                <p class="job-show-text">薪资下限：<%= @job.wage_lower_bound%></p>
-                            </li>
-                            <li class="list-group-item">
-                                <p class="job-show-text">薪资上限：<%= @job.wage_upper_bound%></p>
-                            </li>
-                            <li class="list-group-item">
-                                <p class="job-show-text">招聘要求：<%= @job.description%></p>
-                            </li>
-                        </ul>
                     </div>
-                    <div class="panel-footer text-center"><%= link_to("投交履历", new_job_resume_path(@job), class: "btn btn-primary btn-lg")%></div>
-                </div>
-                <div class="service-space-wilder">
                 </div>
             </div>
+            <% if @sames.length > 0 %>
+                <div class="col-md-3">
+                    <div style="margin-bottom:89px;">
+                    </div>
+                    <div class="side-box">
+                        <div class="suggest-title">
+                            <span>相似职位</span>
+                        </div>
+                        <% @sames.each do |job| %>
+                            <div class="suggest-content">
+                                <div>
+                                    <h3>
+                                        <%= link_to job_path(job), target: "_blank" do %>
+                                            <%= job.title %> [<%= job.location %>]
+                                            <% end %>
+                                    </h3>
+                                </div>
+                                <div>
+                                    <p><%= job.wage_lower_bound %>  ~ <%= job.wage_upper_bound %> </p>
+                                </div>
+                                <div><span><%= job.company %></span></div>
+                            </div>
+                        <% end %>
+                    </div>
+                </div>
+            <% end %>
         </div>
     </div>
 </div>
